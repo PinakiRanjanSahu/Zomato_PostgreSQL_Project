@@ -1,17 +1,19 @@
 # Zomato_PostgreSQL_Project
 I recently worked on this project where I explored food and restaurant dataset using PostgreSQL. The idea was to dig into the data, clean it up, and run meaningful SQL queries to find patterns in customer orders, restaurant performance, and delivery times.
+
+
 #Explore EDA
-		----------------------------------------------------
-		--IMPORT DATASET
-		----------------------------------------------------
+		
+#--IMPORT DATASET
+		
 		SELECT * FROM customers;
 		SELECT * FROM restaurants;
         SELECT * FROM orders;
 		SELECT * FROM deliveries;
 		SELECT * FROM riders;
-		----------------------------------------------------
-		-- Handling NULL Values
-		----------------------------------------------------
+		
+# Handling NULL Values
+		
 		SELECT COUNT(*) FROM restaurants
 		WHERE 
 		  restaurant_name IS NULL
@@ -32,53 +34,46 @@ I recently worked on this project where I explored food and restaurant dataset u
 		  OR order_status IS NULL
 		  OR total_amount IS NULL;
 		
--- ----------------------------------------------------
--- Analysis & Report
--- ----------------------------------------------------
+
+# Analysis & Report
+
 		
--- Q.1
--- Write a query to find the top 5 most frequently ordered dishes by customer called "Kevin" in the last 1 year
---
-		
--- join cx and orders
---filter the data for last one year
---filter for 'kevin'
--- group by cx_id,dishes,cnt
-		
-		
-SELECT 
-customer_name,
-total_orders,
-dishes
-FROM
-(SELECT 
-c.customer_id,
-c.customer_name,
-o.order_item as dishes,
-COUNT(*) as total_orders,
-DENSE_RANK() OVER (ORDER BY COUNT(*) DESC) as RANK
-FROM orders as o 
-JOIN
-	customers as c
-ON c.customer_id=o.order_id
-WHERE
-	o.order_date>= CURRENT_DATE - INTERVAL '1 YEAR'
-AND
-	c.customer_name='Saksham Ben'
-GROUP BY 1,2,3
-ORDER BY 1,4 DESC) as t1
-WHERE RANK <= 5
+# Q.1
+# Write a query to find the top 5 most frequently ordered dishes by customer called "Kevin" in the last 1 year
+ 
+	
+	SELECT 
+	customer_name,
+	total_orders,
+	dishes
+	FROM
+	(SELECT 
+	c.customer_id,
+	c.customer_name,
+	o.order_item as dishes,
+	COUNT(*) as total_orders,
+	DENSE_RANK() OVER (ORDER BY COUNT(*) DESC) as RANK
+	FROM orders as o 
+	JOIN
+		customers as c
+	ON c.customer_id=o.order_id
+	WHERE
+		o.order_date>= CURRENT_DATE - INTERVAL '1 YEAR'
+	AND
+		c.customer_name='Saksham Ben'
+	GROUP BY 1,2,3
+	ORDER BY 1,4 DESC) as t1
+	WHERE RANK <= 5
 ---------------------------------------------------------------------------------------------------------------------------
 		
 		
 		
--- 2. Popular Time slot
--- Q.Identify the tiem slots during which the most orders are placed, based on 2 hour intervals.
---
+# 2. Popular Time slot
+# Q.Identify the tiem slots during which the most orders are placed, based on 2 hour intervals.
 		
---
--- 1ST Approch
---
+
+# 1ST Approch
+
 		
 	SELECT
 	CASE
