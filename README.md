@@ -65,12 +65,13 @@
     	CONSTRAINT fk_riders FOREIGN KEY (rider_id) REFERENCES riders(rider_id)
     );  
 
-# end of Schemas
+# --end of Schemas--------------------------------------------------------------------
 
 
-		--Explore EDA
+#Explore EDA
+
 		----------------------------------------------------
-		--IMPORT DATASET
+# IMPORT DATASET
 		----------------------------------------------------
 		SELECT * FROM customers;
 		SELECT * FROM restaurants;
@@ -78,7 +79,7 @@
 		SELECT * FROM deliveries;
 		SELECT * FROM riders;
 		----------------------------------------------------
-		-- Handling NULL Values
+# Handling NULL Values
 		----------------------------------------------------
 		SELECT COUNT(*) FROM restaurants
 		WHERE 
