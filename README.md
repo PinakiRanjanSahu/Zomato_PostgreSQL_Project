@@ -1,7 +1,38 @@
 # Zomato Data Analysis using SQL
 
-# Creating Customers Table
+# 📌 Overview
 
+	This project focuses on analyzing food and restaurant data (similar to Zomato) using PostgreSQL for data storage, cleaning, and querying. The aim is to derive meaningful insights about restaurant trends, customer preferences, cuisine popularity, ratings, and cost distribution.
+	
+	By performing exploratory data analysis (EDA) with SQL, we uncover hidden patterns that can help businesses and customers make informed decisions—such as identifying the most popular cuisines, understanding rating distributions, and comparing restaurant pricing across different locations.
+
+
+ # Food-Restaurant-Analysis/
+	│
+	├── 📂 data/ 
+	│   ├── zomato_raw.csv              # Raw dataset
+	│   ├── zomato_cleaned.csv          # Cleaned dataset
+	│   └── schema.sql                  # Database schema (PostgreSQL)
+	│
+	├── 📂 sql_queries/
+	│   ├── data_cleaning.sql           # Scripts for handling nulls, duplicates
+	│   ├── exploratory_queries.sql     # EDA queries (ratings, cuisines, costs, locations)
+	│   ├── advanced_analysis.sql       # Joins, aggregations, insights
+	│   └── visualization_queries.sql   # Queries for exporting data to visualization tools
+	│
+	├── 📂 notebooks/
+	│   └── analysis.ipynb              # Jupyter notebook (SQL + Python for visualization)
+	│
+	├── 📂 reports/
+	│   ├── summary_report.md           # Project summary & key findings
+	│   └── insights.pdf                # Visual insights and charts
+	│
+	├── requirements.txt                # Dependencies (psycopg2, pandas, matplotlib, etc.)
+	├── README.md                       # Project description & instructions
+	└── LICENSE                         # Open-source license
+
+ 
+# Creating Customers Table
     CREATE TABLE customers
     (
          customer_id INT PRIMARY KEY,
