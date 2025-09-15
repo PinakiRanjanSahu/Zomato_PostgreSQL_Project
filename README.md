@@ -40,41 +40,51 @@
  
 ## 🏗️ Project Structure
 
+ 	food-restaurant-sql-analysis/
+	│
+	├── data/ # Sample datasets
+	├── sql_scripts/ # All SQL queries
+	├── notebooks/ # SQL + Python analysis
+	├── reports/ # Project summary & insights
+	├── schema.sql # DB schema
+	├── requirements.txt # Dependencies
+	└── README.md # Documentation
+
 # Key Steps in the Project
 
-	1.Data Collection & Import
+	# 1.Data Collection & Import
 	
-	.Imported Zomato-like dataset into PostgreSQL.
+		.Imported Zomato-like dataset into PostgreSQL.
+		
+		.Designed schema with appropriate datatypes & constraints.
 	
-	.Designed schema with appropriate datatypes & constraints.
+	# 2.Data Cleaning & Preparation
 	
-	2.Data Cleaning & Preparation
+		.Removed duplicates, handled null values.
+		
+		.Normalized inconsistent columns (e.g., cuisines, price ranges, locations).
 	
-	.Removed duplicates, handled null values.
+	# 3.Exploratory Data Analysis (EDA)
 	
-	.Normalized inconsistent columns (e.g., cuisines, price ranges, locations).
+		.Identified top cuisines and most popular restaurant types.
+		
+		.Analyzed average costs across cities and cuisines.
+		
+		.Studied rating distributions and customer preferences.
 	
-	3.Exploratory Data Analysis (EDA)
+	# 4.Advanced Insights
 	
-	.Identified top cuisines and most popular restaurant types.
+		.Correlation between cost and ratings.
+		
+		.Best performing restaurants in each city.
+		
+		.Impact of online delivery on restaurant ratings.
 	
-	.Analyzed average costs across cities and cuisines.
+	# 5.Visualization
 	
-	.Studied rating distributions and customer preferences.
-	
-	4.Advanced Insights
-	
-	.Correlation between cost and ratings.
-	
-	.Best performing restaurants in each city.
-	
-	.Impact of online delivery on restaurant ratings.
-	
-	5.Visualization
-	
-	.Exported SQL query results to Python (Pandas/Matplotlib/Seaborn).
-	
-	.Built charts: heatmaps, bar plots, pie charts, location-wise analysis.
+		.Exported SQL query results to Python (Pandas/Matplotlib/Seaborn).
+		
+		.Built charts: heatmaps, bar plots, pie charts, location-wise analysis.
 
 
 
