@@ -11,31 +11,74 @@
   	understanding rating distributions, and comparing restaurant pricing across different locations.
 
 
- # Project Structure
+# food-restaurant-sql-analysis/
 	│
-	├── 📂 data/ 
-	│   ├── zomato_raw.csv              # Raw dataset
-	│   ├── zomato_cleaned.csv          # Cleaned dataset
-	│   └── schema.sql                  # Database schema (PostgreSQL)
+	├── 📂 data/
+	│   ├── customers.csv
+	│   ├── restaurants.csv
+	│   ├── orders.csv
+	│   ├── deliveries.csv
+	│   └── riders.csv
 	│
-	├── 📂 sql_queries/
-	│   ├── data_cleaning.sql           # Scripts for handling nulls, duplicates
-	│   ├── exploratory_queries.sql     # EDA queries (ratings, cuisines, costs, locations)
-	│   ├── advanced_analysis.sql       # Joins, aggregations, insights
-	│   └── visualization_queries.sql   # Queries for exporting data to visualization tools
+	├── 📂 sql_scripts/
+	│   ├── 01_import_dataset.sql
+	│   ├── 02_data_cleaning.sql
+	│   ├── 03_exploratory_analysis.sql
+	│   └── 04_reports_and_insights.sql   # The queries you shared
 	│
 	├── 📂 notebooks/
-	│   └── analysis.ipynb              # Jupyter notebook (SQL + Python for visualization)
+	│   └── sql_analysis.ipynb   # If you want to run SQL via Python (psycopg2 / sqlalchemy)
 	│
 	├── 📂 reports/
-	│   ├── summary_report.md           # Project summary & key findings
-	│   └── insights.pdf                # Visual insights and charts
-	│
-	├── requirements.txt                # Dependencies (psycopg2, pandas, matplotlib, etc.)
-	├── README.md                       # Project description & instructions
-	└── LICENSE                         # Open-source license
-
+	│   ├── project_summary.md
+	│   ├── insights.pdf
+	│   └── charts/   # (exported visualizations)
+	|
+	├── schema.sql         # database schema for creating tables
+	├── README.md          # main GitHub page
+	└── LICENSE
  
+## 🏗️ Project Structure
+
+# Key Steps in the Project
+
+	1.Data Collection & Import
+	
+	.Imported Zomato-like dataset into PostgreSQL.
+	
+	.Designed schema with appropriate datatypes & constraints.
+	
+	2.Data Cleaning & Preparation
+	
+	.Removed duplicates, handled null values.
+	
+	.Normalized inconsistent columns (e.g., cuisines, price ranges, locations).
+	
+	3.Exploratory Data Analysis (EDA)
+	
+	.Identified top cuisines and most popular restaurant types.
+	
+	.Analyzed average costs across cities and cuisines.
+	
+	.Studied rating distributions and customer preferences.
+	
+	4.Advanced Insights
+	
+	.Correlation between cost and ratings.
+	
+	.Best performing restaurants in each city.
+	
+	.Impact of online delivery on restaurant ratings.
+	
+	5.Visualization
+	
+	.Exported SQL query results to Python (Pandas/Matplotlib/Seaborn).
+	
+	.Built charts: heatmaps, bar plots, pie charts, location-wise analysis.
+
+
+
+
 # Creating Customers Table
     CREATE TABLE customers
     (
