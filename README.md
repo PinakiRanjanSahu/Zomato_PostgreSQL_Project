@@ -2,9 +2,13 @@
 
 # 📌 Overview
 
-	This project focuses on analyzing food and restaurant data (similar to Zomato) using PostgreSQL for data storage, cleaning, and querying. The aim is to derive meaningful insights about restaurant trends, customer preferences, cuisine popularity, ratings, and cost distribution.
+	This project focuses on analyzing food and restaurant data (similar to Zomato) using PostgreSQL 
+ 	for data storage,cleaning, and querying. The aim is to derive meaningful insights about restaurant 
+  	trends, customer preferences, cuisine popularity, ratings, and cost distribution.
 	
-	By performing exploratory data analysis (EDA) with SQL, we uncover hidden patterns that can help businesses and customers make informed decisions—such as identifying the most popular cuisines, understanding rating distributions, and comparing restaurant pricing across different locations.
+	By performing exploratory data analysis (EDA) with SQL, we uncover hidden patterns that can help
+ 	businesses and customers make informed decisions—such as identifying the most popular cuisines, 
+  	understanding rating distributions, and comparing restaurant pricing across different locations.
 
 
  # Food-Restaurant-Analysis/
