@@ -11,7 +11,7 @@
   	understanding rating distributions, and comparing restaurant pricing across different locations.
 
 
- # Food-Restaurant-Analysis/
+ # Project Structure
 	│
 	├── 📂 data/ 
 	│   ├── zomato_raw.csv              # Raw dataset
