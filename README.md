@@ -10,6 +10,7 @@
  	businesses and customers make informed decisions—such as identifying the most popular cuisines, 
   	understanding rating distributions, and comparing restaurant pricing across different locations.
 
+# ERD
 ![](https://github.com/PinakiRanjanSahu/Zomato_PostgreSQL_Project/blob/main/Screenshot%202025-09-11%20204349.png)
 
 # food-restaurant-sql-analysis/
