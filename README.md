@@ -13,7 +13,7 @@
 # ERD
 ![](https://github.com/PinakiRanjanSahu/Zomato_PostgreSQL_Project/blob/main/Screenshot%202025-09-11%20204349.png)
 
-# food-restaurant-sql-analysis/
+# Food-restaurant-sql-analysis/
 	│
 	├── 📂 data/
 	│   ├── customers.csv
@@ -123,13 +123,13 @@
     );
 
 
-# adding constraints fk_customers
+# Adding constraints fk_customers
     ALTER TABLE orders
     ADD CONSTRAINT fk_customers
     FOREIGN KEY (customer_id)
     REFERENCES customers(customer_id);
 
-# adding constraints fk_restaurent
+# Adding constraints fk_restaurent
     ALTER TABLE orders
     ADD CONSTRAINT fk_restaurants
     FOREIGN KEY (restaurant_id)
